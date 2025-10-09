@@ -1,0 +1,155 @@
+/* styles/App.css */
+
+/* --- Global & Background Styles --- */
+.app-container {
+    background-color: #363636;
+    min-height: 100vh;
+    color: white;
+
+    /* Flexbox for vertical stacking and centering content */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    padding: 20px;
+    
+    /* RESTORED: Removed width: 100vw; and box-sizing: border-box; 
+       as it's not needed when using max-width on children. */
+}
+
+/* --- Site Logo Styles (Above Header) --- */
+.site-logo {
+    max-width: 250px; 
+    height: auto;
+    margin-bottom: 25px; 
+}
+
+/* --- Main Header Styles --- */
+.main-header {
+    color: white; 
+    font-size: 2.5rem; 
+    margin-bottom: 25px; 
+    text-align: center; 
+    padding: 0 10px;
+}
+
+/* --- Food Image Styles --- */
+.food-image {
+    max-width: 250px; 
+    width: 100%;
+    height: auto;
+    border-radius: 15px; 
+    margin-bottom: 30px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+/* --- Main Interface Containers (Form and Confirmation) --- */
+
+/* Style block for the Booking Form container */
+.page-container {
+    /* RESTORED: Set back to original portrait proportions */
+    max-width: 450px;
+    width: 100%;
+    
+    /* REMOVED: flex-grow, max-height, and overflow-y */
+
+    padding: 40px 20px;
+    background-color: #484848; /* Dark Grey Background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px; 
+}
+
+.page-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f4ce14; 
+}
+
+/* --- Form Spacing --- */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    padding-top: 20px;
+    width: 100%; 
+}
+
+/* Style for labels to be on their own line */
+.booking-form label {
+    font-weight: bold;
+    margin-bottom: -5px; 
+    display: block;
+}
+
+/* Standard styling for inputs and selects */
+.booking-form input:not([type="checkbox"]),
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+    color: white; 
+    background-color: #333333; 
+}
+.booking-form select option {
+    background-color: #333333; 
+    color: white; 
+}
+
+.booking-form button[type="submit"] {
+    margin-top: 30px; 
+    padding: 12px 20px;
+    background-color: #f4ce14;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.booking-form button[type="submit"]:hover {
+    background-color: #ffc900;
+}
+
+.error {
+    color: #ff6666;
+    font-size: 0.9em;
+    margin-top: -10px; 
+    margin-bottom: 5px;
+}
+
+/* Confirmation Page Styles (also uses dark theme) */
+.confirmation-container {
+    /* RESTORED: Set back to original portrait proportions */
+    max-width: 450px;
+    width: 100%;
+    
+    /* REMOVED: flex-grow, max-height, and overflow-y */
+
+    padding: 40px 20px;
+    background-color: #484848; 
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.confirmation-container h2 {
+    color: #f4ce14; 
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.confirmation-container p {
+    color: white; 
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-align: left; 
+    padding-left: 10%; 
+}
