@@ -1,30 +1,26 @@
-// src/App.jsx
-import { useState } from "react";
-import BookingPage from "./components/BookingPage";
-import ConfirmedBooking from "./components/ConfirmedBooking";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
+import PCBookingForm from "./components/PCBookingForm";
+import FoodMenu from "./components/FoodMenu";
 import "./styles/App.css";
-import foodImage from "./assets/Food.png";
-import logoImage from "./assets/logo.png"; // <-- NEW IMPORT
 
 function App() {
-  const [bookingData, setBookingData] = useState(null);
-
   return (
-    <div className="app-container">
-      
-      {/* NEW LOGO IMAGE ADDED HERE */}
-      <img src={logoImage} alt="Little Lemon Logo" className="site-logo" /> 
-      
-      <h1 className="main-header">Little Lemon Restaurant</h1>
-      
-      <img src={foodImage} alt="Delicious Little Lemon Food" className="food-image" /> 
-
-      {!bookingData ? (
-        <BookingPage setBookingData={setBookingData} />
-      ) : (
-        <ConfirmedBooking bookingData={bookingData} />
-      )}
-    </div>
+    <Router>
+      <div className="app-container">
+        <Header />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/book-pc" element={<PCBookingForm />} />
+            <Route path="/menu" element={<FoodMenu />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

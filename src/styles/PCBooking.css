@@ -1,0 +1,102 @@
+.booking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.booking-panel {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+}
+
+.booking-panel h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-group input, 
+.form-group select {
+  padding: 12px 15px;
+  background-color: var(--dark-layer-2);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-yellow);
+}
+
+.cost-calculator {
+  text-align: right;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 10px;
+}
+
+.cost-calculator h3 {
+  font-size: 1.5rem;
+}
+
+.w-full {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.success-panel {
+  text-align: center;
+  padding: 60px 40px;
+  max-width: 500px;
+}
+
+.success-panel h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.success-panel p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
